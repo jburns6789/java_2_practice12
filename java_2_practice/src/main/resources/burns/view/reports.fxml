@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="burns.controller.reports_controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="53.0" prefHeight="778.0" prefWidth="694.0" spacing="25.0">
+         <children>
+            <Label text="Reports" />
+            <Label text="Total number of Customer Appointments by (select Month or Type)" />
+            <ComboBox fx:id="typeCb" prefWidth="150.0" />
+            <ComboBox fx:id="monthCb" prefWidth="150.0" />
+            <Label fx:id="typeOutputLabel" text="Total Number" />
+            <Button mnemonicParsing="false" onAction="#displayAppointments" text="Create Report" />
+            <Label text="Schedule by Contact (Select User)" />
+            <ComboBox fx:id="contactSelectCB" layoutX="282.0" layoutY="211.0" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#displaySchedule" text="Create Report" />
+            <Label text="Appointments by Customer ID" />
+            <ComboBox fx:id="customerIdCb" layoutX="151.0" layoutY="145.0" onAction="#onCustomerIdSelection" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#displayCustomerIdAppt" text="Create Report" />
+            <TableView fx:id="contactDisplayView" prefHeight="135.0" prefWidth="618.0">
+              <columns>
+                <TableColumn fx:id="apptIdCol" prefWidth="119.0" text="Appointment ID" />
+                <TableColumn fx:id="titleCol" prefWidth="74.0" text="Title" />
+                  <TableColumn fx:id="typeCol" prefWidth="74.0" text="Type" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="74.0" text="Description" />
+                  <TableColumn fx:id="startCol" prefWidth="74.0" text="Start Time" />
+                  <TableColumn fx:id="endCol" prefWidth="74.0" text="End Time" />
+                  <TableColumn fx:id="cusIdCol" prefWidth="140.0" text="Customer ID" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button layoutX="545.0" layoutY="800.0" mnemonicParsing="false" onAction="#onExit" text="Exit" />
+      <Button layoutX="224.0" layoutY="800.0" mnemonicParsing="false" onAction="#onAppointmentScreen" text="Appointment Screen" />
+   </children>
+</AnchorPane>

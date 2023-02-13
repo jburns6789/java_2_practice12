@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="burns.controller.customer_controller">
+   <children>
+      <Label layoutX="448.0" layoutY="43.0" text="Customers" />
+      <TableView fx:id="customerTable" layoutX="120.0" layoutY="100.0" prefHeight="200.0" prefWidth="703.0">
+        <columns>
+          <TableColumn fx:id="cusIdCol" prefWidth="78.0" text="Customer Id" />
+          <TableColumn fx:id="cusNameCol" prefWidth="101.0" text="Name" />
+            <TableColumn fx:id="cusAddressCol" prefWidth="100.0" text="Address" />
+            <TableColumn fx:id="cusPostalCodeCol" prefWidth="98.0" text="Postal Code" />
+            <TableColumn fx:id="cusPhoneCol" prefWidth="99.0" text="Phone Number" />
+            <TableColumn fx:id="cusStateProvidenceCol" prefWidth="115.0" text="State/Providence" />
+            <TableColumn fx:id="cusCountryCol" prefWidth="110.0" text="Country" />
+        </columns>
+      </TableView>
+      <Button layoutX="862.0" layoutY="353.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Button layoutX="508.0" layoutY="328.0" mnemonicParsing="false" onAction="#onDeleteCustomer" text="Delete" />
+      <Button layoutX="611.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClearSelection" text="Clear Selection" />
+      <Button layoutX="366.0" layoutY="328.0" mnemonicParsing="false" onAction="#onAddModify" text="Add/Modify" />
+   </children>
+</AnchorPane>

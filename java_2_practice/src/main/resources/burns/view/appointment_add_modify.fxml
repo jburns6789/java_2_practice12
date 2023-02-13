@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="burns.controller.appointment_add_modify_controller">
+   <children>
+      <Button layoutX="200.0" layoutY="711.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+      <VBox alignment="CENTER" layoutX="95.0" layoutY="154.0" prefHeight="460.0" prefWidth="150.0" spacing="28.0">
+         <children>
+            <Label text="Appointment ID" />
+            <Label text="Title" />
+            <Label text="Description" />
+            <Label text="Location" />
+            <Label text="Contact Name" />
+            <Label text="Type" />
+            <Label text="Start Date" />
+            <Label text="Start Time" />
+            <Label text="End Time" />
+            <Label text="Customer ID" />
+            <Label text="User ID" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="315.0" layoutY="124.0" prefHeight="528.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <TextField fx:id="addApptIdTf" disable="true" />
+            <TextField fx:id="addApptTitleTf" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="addApptDescriptionTf" layoutX="10.0" layoutY="56.0" />
+            <TextField fx:id="addApptLocationTf" layoutX="10.0" layoutY="102.0" />
+            <ComboBox fx:id="addApptContactNameCb" prefWidth="150.0" />
+            <TextField fx:id="addApptTypeTf" layoutX="10.0" layoutY="148.0" />
+            <DatePicker fx:id="addApptStartDatePicker" />
+            <ComboBox fx:id="apptAddStartTimeCb" prefWidth="150.0" />
+            <ComboBox fx:id="addApptEndTimeCb" prefWidth="150.0" />
+            <ComboBox fx:id="addApptCustomerIdCb" layoutX="10.0" layoutY="330.0" prefWidth="150.0" />
+            <ComboBox fx:id="addApptUserIdCb" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Button layoutX="362.0" layoutY="711.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Label layoutX="233.0" layoutY="68.0" text="Add / Modify Appointment" />
+   </children>
+</AnchorPane>
